@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CM Technologies — Créateur de sites web sur mesure. Sites vitrines, portfolios, boutiques pour professionnels exigeants." />
+  <title>CM Technologies — Créateur de sites web</title>
+
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/apropos.css" />
+  <link rel="stylesheet" href="assets/css/projets.css" />
+  <link rel="stylesheet" href="assets/css/tarifs.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION — ancres vers chaque section
+  ══════════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Haut de page">
+        <span class="nav__logo-mark">CM</span>
+        <span class="nav__logo-name">Technologies</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#contact" class="nav__cta">Me contacter</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" id="navMobile" aria-label="Menu mobile">
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Me contacter</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+         1. HERO
+    ══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+
+      <div class="container hero__body">
+        <div class="hero__left">
+          <div class="badge-dispo anim-fadeup anim-d1">
+            <span class="badge-dispo__dot"></span>
+            Disponible pour de nouveaux projets
+          </div>
+          <h1 class="hero__title anim-fadeup anim-d2">
+            Je crée des sites web
+            <em>à votre image</em>
+          </h1>
+          <p class="hero__desc anim-fadeup anim-d3">
+            Sites vitrines, portfolios, boutiques en ligne — je conçois des expériences digitales soignées pour les professionnels qui veulent vraiment se démarquer.
+          </p>
+          <div class="hero__actions anim-fadeup anim-d4">
+            <a href="#projets" class="btn btn--primary btn--lg">Voir mes réalisations</a>
+            <a href="#contact" class="btn btn--ghost btn--lg">Parler de votre projet →</a>
+          </div>
+        </div>
+
+        <div class="hero__right anim-fadeup anim-d3">
+          <div class="hero__code-card">
+            <div class="hero__code-card-bar">
+              <div class="hero__code-dots"><span></span><span></span><span></span></div>
+              <span class="hero__code-filename">CM Technologies / votre-site.html</span>
+            </div>
+            <div class="hero__code-body">
+              <span class="code-line"><span class="c-tag">&lt;site&gt;</span></span>
+              <span class="code-line code-line--indent"><span class="c-attr">design</span><span class="c-equals"> = </span><span class="c-val">"sur mesure"</span></span>
+              <span class="code-line code-line--indent"><span class="c-attr">responsive</span><span class="c-equals"> = </span><span class="c-val">"100%"</span></span>
+              <span class="code-line code-line--indent"><span class="c-attr">performance</span><span class="c-equals"> = </span><span class="c-val">"optimisée"</span></span>
+              <span class="code-line code-line--indent"><span class="c-attr">livraison</span><span class="c-equals"> = </span><span class="c-val">"7 à 14 jours"</span></span>
+              <span class="code-line code-line--indent"><span class="c-attr">satisfaction</span><span class="c-equals"> = </span><span class="c-val">"garantie"</span> <span class="c-comment">&lt;!-- promis --&gt;</span></span>
+              <span class="code-line"><span class="c-tag">&lt;/site&gt;</span></span>
+            </div>
+          </div>
+          <div class="hero__chip hero__chip--1 float-anim"><span class="hero__chip-icon">🎯</span> Identité soignée</div>
+          <div class="hero__chip hero__chip--2 float-anim-2"><span class="hero__chip-icon">⚡</span> Rapide &amp; léger</div>
+        </div>
+      </div>
+
+      <div class="hero__footer">
+        <div class="scroll-indicator anim-fadein anim-d6">
+          <div class="scroll-indicator__line"></div>
+          Défiler
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         CHIFFRES CLÉS
+    ══════════════════════════════════════════════════════════ -->
+    <div class="chiffres">
+      <div class="container">
+        <div class="chiffres__grid">
+          <div class="chiffre reveal">
+            <span class="chiffre__num" data-target="4">0</span>
+            <span class="chiffre__label">Années d'expérience</span>
+          </div>
+          <div class="chiffre reveal reveal-d1">
+            <span class="chiffre__num" data-target="100">0</span><span class="chiffre__suffix">%</span>
+            <span class="chiffre__label">Clients satisfaits</span>
+          </div>
+          <div class="chiffre reveal reveal-d2">
+            <span class="chiffre__num" data-target="7">0</span><span class="chiffre__suffix">j</span>
+            <span class="chiffre__label">Délai moyen</span>
+          </div>
+          <div class="chiffre reveal reveal-d3">
+            <span class="chiffre__num" data-target="1000">0</span>
+            <span class="chiffre__label">Raisons de travailler ensemble</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         2. À PROPOS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section" id="apropos">
+      <div class="container">
+        <div class="intro">
+
+          <div class="intro__visual reveal-left">
+            <div class="intro__avatar" aria-hidden="true">M</div>
+            <div class="intro__avatar-ring" aria-hidden="true"></div>
+            <div class="intro__badge">
+              <div class="intro__badge-icon">✦</div>
+              <strong>Créateur</strong>
+              <span>de sites web</span>
+            </div>
+          </div>
+
+          <div class="intro__text">
+            <div class="section-label reveal">À propos</div>
+            <h2 class="reveal">Un regard précis,<br/><em>un résultat qui dure</em></h2>
+            <p class="reveal">Passionné par le web depuis mes premiers projets, j'ai appris à conjuguer <strong>esthétique exigeante</strong> et <strong>efficacité technique</strong>. Mon approche est simple : écouter, comprendre votre métier, puis concevoir un site qui vous ressemble — et qui travaille pour vous 24h/24.</p>
+            <p class="reveal">Je travaille en totale autonomie, de la maquette à la mise en ligne, avec une communication claire à chaque étape. <strong>Pas de jargon, pas de surprise</strong> sur la facture. Juste un site dont vous serez fier.</p>
+            <span class="intro__signature reveal">CM Technologies</span>
+
+            <div class="competences reveal" style="margin-top:44px;">
+              <div>
+                <div class="comp-item__label"><span>Design &amp; Intégration HTML/CSS</span><span class="comp-item__pct">95%</span></div>
+                <div class="comp-bar"><div class="comp-bar__fill" data-width="95"></div></div>
+              </div>
+              <div>
+                <div class="comp-item__label"><span>JavaScript interactif</span><span class="comp-item__pct">85%</span></div>
+                <div class="comp-bar"><div class="comp-bar__fill" data-width="85"></div></div>
+              </div>
+              <div>
+                <div class="comp-item__label"><span>Responsive &amp; Accessibilité</span><span class="comp-item__pct">92%</span></div>
+                <div class="comp-bar"><div class="comp-bar__fill" data-width="92"></div></div>
+              </div>
+              <div>
+                <div class="comp-item__label"><span>SEO &amp; Performance</span><span class="comp-item__pct">80%</span></div>
+                <div class="comp-bar"><div class="comp-bar__fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valeurs -->
+        <div style="margin-top:100px;">
+          <div class="section-header section-header--center reveal">
+            <div class="section-label">Ma méthode</div>
+            <h2>Mes <em>valeurs de travail</em></h2>
+          </div>
+          <div class="valeurs__grid">
+            <div class="valeur-card reveal"><span class="valeur-card__icon">🎯</span><h3 class="valeur-card__title">Écoute &amp; précision</h3><p class="valeur-card__text">Chaque projet commence par une vraie conversation. Je prends le temps de comprendre votre activité avant d'écrire la première ligne de code.</p></div>
+            <div class="valeur-card reveal reveal-d1"><span class="valeur-card__icon">✨</span><h3 class="valeur-card__title">Design soigné</h3><p class="valeur-card__text">Un site beau n'est pas un luxe, c'est votre meilleur commercial. Je conçois des interfaces qui inspirent confiance et donnent envie d'aller plus loin.</p></div>
+            <div class="valeur-card reveal reveal-d2"><span class="valeur-card__icon">⚡</span><h3 class="valeur-card__title">Performance</h3><p class="valeur-card__text">Un site lent perd ses visiteurs. J'optimise chaque page pour un chargement rapide, un bon référencement et une expérience fluide sur tous les appareils.</p></div>
+            <div class="valeur-card reveal reveal-d3"><span class="valeur-card__icon">🔒</span><h3 class="valeur-card__title">Transparence totale</h3><p class="valeur-card__text">Tarifs clairs, délais respectés, communication régulière. Vous savez à tout moment où en est votre projet, sans mauvaise surprise.</p></div>
+            <div class="valeur-card reveal reveal-d4"><span class="valeur-card__icon">📱</span><h3 class="valeur-card__title">100% Mobile-first</h3><p class="valeur-card__text">La majorité du trafic web vient du mobile. Chaque site que je crée est pensé d'abord pour les smartphones, puis adapté aux grands écrans.</p></div>
+            <div class="valeur-card reveal reveal-d5"><span class="valeur-card__icon">🤝</span><h3 class="valeur-card__title">Suivi post-livraison</h3><p class="valeur-card__text">Mon travail ne s'arrête pas à la mise en ligne. Je reste disponible pour répondre à vos questions et vous accompagner dans la durée.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         3. PROJETS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="projets">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Réalisations</div>
+          <h2>Trois univers,<br/><em>une même exigence</em></h2>
+          <p class="section-desc">Des sites conçus sur mesure pour des métiers très différents — chacun avec son identité propre, son ton et ses objectifs.</p>
+        </div>
+
+        <div class="projets__grid">
+
+          <article class="projet-card reveal">
+            <div class="projet-card__preview projet-card__preview--arch" aria-hidden="true">
+              <div class="projet-card__mockup">
+                <div class="mockup__bar"><span></span><span></span><span></span></div>
+                <div class="mockup__body mockup__body--arch">
+                  <div class="mockup__hero mockup__hero--dark"></div>
+                  <div class="mockup__stripe mockup__stripe--gold mockup__stripe--w70"></div>
+                  <div class="mockup__stripe mockup__stripe--white mockup__stripe--w50"></div>
+                  <div class="mockup__stripe mockup__stripe--dim mockup__stripe--w80"></div>
+                </div>
+              </div>
+            </div>
+            <div class="projet-card__body">
+              <div class="projet-card__meta"><span class="projet-card__num">01 / 03</span><span class="projet-card__cat">Architecture</span></div>
+              <h3 class="projet-card__title">Maison Lefèvre</h3>
+              <p class="projet-card__desc">Site vitrine luxueux pour une agence d'architecture parisienne. Style éditorial haut de gamme, palette noir &amp; or, curseur personnalisé et animations au scroll.</p>
+              <ul class="projet-card__tags"><li>HTML5</li><li>CSS avancé</li><li>JavaScript</li><li>Animations</li></ul>
+              <a href="#contact" class="projet-card__cta">Voir l'exemple →</a>
+            </div>
+          </article>
+
+          <article class="projet-card reveal reveal-d1">
+            <div class="projet-card__preview projet-card__preview--natur" aria-hidden="true">
+              <div class="projet-card__mockup">
+                <div class="mockup__bar"><span></span><span></span><span></span></div>
+                <div class="mockup__body mockup__body--natur">
+                  <div class="mockup__hero mockup__hero--light"></div>
+                  <div class="mockup__stripe mockup__stripe--sage mockup__stripe--w60"></div>
+                  <div class="mockup__stripe mockup__stripe--brown mockup__stripe--w80"></div>
+                  <div class="mockup__stripe mockup__stripe--beige mockup__stripe--w55"></div>
+                </div>
+              </div>
+            </div>
+            <div class="projet-card__body">
+              <div class="projet-card__meta"><span class="projet-card__num">02 / 03</span><span class="projet-card__cat">Santé &amp; Bien-être</span></div>
+              <h3 class="projet-card__title">Clara Sanson</h3>
+              <p class="projet-card__desc">Site vitrine chaleureux pour une naturopathe. Tons organiques crème &amp; sauge, formes arrondies, formulaire de RDV intégré et blog bien-être.</p>
+              <ul class="projet-card__tags"><li>HTML5</li><li>CSS organique</li><li>Formulaire</li><li>Blog</li></ul>
+              <a href="#contact" class="projet-card__cta">Voir l'exemple →</a>
+            </div>
+          </article>
+
+          <article class="projet-card reveal reveal-d2">
+            <div class="projet-card__preview projet-card__preview--dev" aria-hidden="true">
+              <div class="projet-card__mockup">
+                <div class="mockup__bar"><span></span><span></span><span></span></div>
+                <div class="mockup__body mockup__body--dev">
+                  <div class="mockup__hero mockup__hero--neon"></div>
+                  <div class="mockup__stripe mockup__stripe--neon mockup__stripe--w55"></div>
+                  <div class="mockup__stripe mockup__stripe--purple mockup__stripe--w75"></div>
+                  <div class="mockup__stripe mockup__stripe--dark mockup__stripe--w40"></div>
+                </div>
+              </div>
+            </div>
+            <div class="projet-card__body">
+              <div class="projet-card__meta"><span class="projet-card__num">03 / 03</span><span class="projet-card__cat">Tech &amp; Digital</span></div>
+              <h3 class="projet-card__title">RYUK.DEV</h3>
+              <p class="projet-card__desc">Portfolio technique pour un développeur freelance. Style cyberpunk &amp; dark, néons sur fond sombre, terminal de code animé et grille géométrique.</p>
+              <ul class="projet-card__tags"><li>JavaScript</li><li>Dark UI</li><li>Animations</li><li>Terminal CSS</li></ul>
+              <a href="#contact" class="projet-card__cta">Voir l'exemple →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         4. TARIFS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section" id="tarifs">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <div class="section-label">Tarifs transparents</div>
+          <h2>Des formules claires,<br/><em>sans surprise</em></h2>
+          <p class="section-desc">Ces tarifs sont des bases de travail. Je vous envoie un devis précis et gratuit après notre premier échange, sans aucun engagement.</p>
+        </div>
+
+        <div class="tarifs__grid">
+          <div class="tarif-card reveal">
+            <div class="tarif-card__header">
+              <span class="tarif-card__icon">✦</span>
+              <h3 class="tarif-card__name">Essentiel</h3>
+              <p class="tarif-card__tagline">Pour démarrer avec le bon pied</p>
+            </div>
+            <div class="tarif-card__price"><span class="tarif-card__amount">490</span><span class="tarif-card__currency">€</span><span class="tarif-card__period">HT</span></div>
+            <ul class="tarif-card__features">
+              <li><span class="feat-check">✓</span> Site vitrine 1 à 3 pages</li>
+              <li><span class="feat-check">✓</span> Design sur mesure unique</li>
+              <li><span class="feat-check">✓</span> 100% responsive mobile</li>
+              <li><span class="feat-check">✓</span> Formulaire de contact</li>
+              <li><span class="feat-check">✓</span> Mise en ligne incluse</li>
+              <li><span class="feat-check">✓</span> Livraison en 7 jours</li>
+              <li class="off"><span class="feat-check">✗</span> Blog / actualités</li>
+              <li class="off"><span class="feat-check">✗</span> Boutique en ligne</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost tarif-card__btn">Demander un devis</a>
+          </div>
+
+          <div class="tarif-card tarif-card--featured reveal reveal-d1">
+            <div class="tarif-card__badge">Le plus demandé ✦</div>
+            <div class="tarif-card__header">
+              <span class="tarif-card__icon">◆</span>
+              <h3 class="tarif-card__name">Professionnel</h3>
+              <p class="tarif-card__tagline">Le choix des indépendants ambitieux</p>
+            </div>
+            <div class="tarif-card__price"><span class="tarif-card__amount">890</span><span class="tarif-card__currency">€</span><span class="tarif-card__period">HT</span></div>
+            <ul class="tarif-card__features">
+              <li><span class="feat-check">✓</span> Site jusqu'à 6 pages</li>
+              <li><span class="feat-check">✓</span> Design premium animé</li>
+              <li><span class="feat-check">✓</span> 100% responsive mobile</li>
+              <li><span class="feat-check">✓</span> Formulaire avancé</li>
+              <li><span class="feat-check">✓</span> Mise en ligne incluse</li>
+              <li><span class="feat-check">✓</span> Livraison en 10 jours</li>
+              <li><span class="feat-check">✓</span> Section blog / actualités</li>
+              <li><span class="feat-check">✓</span> Optimisation SEO de base</li>
+            </ul>
+            <a href="#contact" class="btn btn--rouge tarif-card__btn">Demander un devis</a>
+          </div>
+
+          <div class="tarif-card reveal reveal-d2">
+            <div class="tarif-card__header">
+              <span class="tarif-card__icon">◈</span>
+              <h3 class="tarif-card__name">Sur mesure</h3>
+              <p class="tarif-card__tagline">Pour les projets ambitieux</p>
+            </div>
+            <div class="tarif-card__price"><span class="tarif-card__amount" style="font-size:2rem;">Sur devis</span></div>
+            <ul class="tarif-card__features">
+              <li><span class="feat-check">✓</span> Pages illimitées</li>
+              <li><span class="feat-check">✓</span> Design 100% unique animé</li>
+              <li><span class="feat-check">✓</span> 100% responsive mobile</li>
+              <li><span class="feat-check">✓</span> Boutique en ligne</li>
+              <li><span class="feat-check">✓</span> Mise en ligne incluse</li>
+              <li><span class="feat-check">✓</span> Délai selon complexité</li>
+              <li><span class="feat-check">✓</span> CMS pour mises à jour</li>
+              <li><span class="feat-check">✓</span> SEO avancé + Analytics</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost tarif-card__btn">Discutons-en</a>
+          </div>
+        </div>
+
+        <p class="tarifs__note reveal">Hébergement en continue, non inclus</p>
+
+        <!-- FAQ -->
+        <div style="margin-top:80px;">
+          <div class="section-header section-header--center reveal">
+            <div class="section-label">Questions fréquentes</div>
+            <h2>Vous avez des <em>questions ?</em></h2>
+          </div>
+          <div class="faq__list">
+            <div class="faq-item reveal">
+              <button class="faq-item__question" aria-expanded="false">Comment se déroule un projet concrètement ?<span class="faq-item__icon" aria-hidden="true">+</span></button>
+              <div class="faq-item__answer"><p>Tout commence par un échange pour comprendre votre projet. Je vous envoie un devis détaillé. Une fois validé, je démarre la maquette, puis l'intégration, et enfin la mise en ligne. Vous êtes informé à chaque étape.</p></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-item__question" aria-expanded="false">Quels sont les délais de livraison réels ?<span class="faq-item__icon" aria-hidden="true">+</span></button>
+              <div class="faq-item__answer"><p>Formule Essentielle : 7 jours ouvrés. Professionnelle : 10 à 14 jours. Les projets sur mesure dépendent de la complexité — un planning précis est fourni dans le devis.</p></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-item__question" aria-expanded="false">Puis-je modifier mon site après livraison ?<span class="faq-item__icon" aria-hidden="true">+</span></button>
+              <div class="faq-item__answer"><p>Absolument. Je vous remets les fichiers sources et vous explique comment effectuer des modifications simples. Des formules de maintenance mensuelle sont également disponibles.</p></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-item__question" aria-expanded="false">L'hébergement et le nom de domaine sont-ils inclus ?<span class="faq-item__icon" aria-hidden="true">+</span></button>
+              <div class="faq-item__answer"><p>Non, ces éléments restent votre propriété. Mais je vous guide dans le choix et la configuration. Comptez environ 10 à 20 €/mois selon l'hébergeur.</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         5. CONTACT
+    ══════════════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="contact">
+      <div class="container contact__layout">
+
+        <div class="contact__intro">
+          <div class="section-label reveal">Parlons de votre projet</div>
+          <h2 class="reveal">Votre projet<br/><em>commence ici</em></h2>
+          <p class="reveal">Décrivez votre projet en quelques mots. Je vous réponds sous 72 heures avec un premier retour et un devis détaillé entièrement gratuit, sans engagement.</p>
+          <div class="contact__infos reveal">
+            <div class="contact__info">
+              <div class="contact__info-icon" aria-hidden="true">✉</div>
+              <div><p class="contact__info-label">Email</p><p class="contact__info-val"><a href="mailto:cmtechnologiesfrance@gmail.com">cmtechnologiesfrance@gmail.com</a></p></div>
+            </div>
+            <div class="contact__info">
+              <div class="contact__info-icon" aria-hidden="true">⏱</div>
+              <div><p class="contact__info-label">Temps de réponse</p><p class="contact__info-val">Sous 72 heures (jours ouvrés)</p></div>
+            </div>
+            <div class="contact__info">
+              <div class="contact__info-icon" aria-hidden="true">📍</div>
+              <div><p class="contact__info-label">Localisation</p><p class="contact__info-val">France — Travail entièrement à distance</p></div>
+            </div>
+          </div>
+          <div class="contact__dispo reveal">
+            <div class="contact__dispo-icon" aria-hidden="true">🟢</div>
+            <div>
+              <strong>Disponible pour de nouveaux projets</strong>
+              <p>Démarrage possible sous 3 à 5 jours ouvrés.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nom &amp; prénom <sup>*</sup></label>
+                <input type="text" id="name" name="name" placeholder="Jean Dupont" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Adresse e-mail <sup>*</sup></label>
+                <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project">Type de projet</label>
+                <select id="project" name="project">
+                  <option value="" disabled selected>Sélectionner...</option>
+                  <option value="vitrine">Site vitrine</option>
+                  <option value="portfolio">Portfolio personnel</option>
+                  <option value="boutique">Boutique en ligne</option>
+                  <option value="refonte">Refonte d'un site existant</option>
+                  <option value="blog">Blog / Site éditorial</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="budget">Budget estimé</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Sélectionner...</option>
+                  <option value="essentiel">Formule Essentielle (~490 €)</option>
+                  <option value="pro">Formule Professionnelle (~890 €)</option>
+                  <option value="sur-mesure">Projet sur mesure</option>
+                  <option value="aucun">Je ne sais pas encore</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group form-group--full">
+              <label for="message">Décrivez votre projet <sup>*</sup></label>
+              <textarea id="message" name="message" placeholder="Parlez-moi de votre activité, vos objectifs, vos inspirations, votre deadline..." required maxlength="1000"></textarea>
+              <span class="form-group__hint">0 / 1000 caractères</span>
+            </div>
+            <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
+              <span class="btn-text">Envoyer ma demande →</span>
+              <span class="btn-loading">Envoi en cours...</span>
+            </button>
+            <div class="form__feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-mark">CM</span>
+            <span class="footer__logo-name">Technologies</span>
+          </div>
+          <p class="footer__tagline">Créateur de sites web sur mesure. Je transforme vos idées en expériences digitales mémorables.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Aller à</p>
+          <ul class="footer__links">
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#contact">Me contacter</a></li>
+            <li><a href="mailto:cmtechnologiesfrance@gmail.com">Email direct</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 CM Technologies — Tous droits réservés</p>
+        <div class="footer__socials">
+          <a href="https://github.com/cmtechnologiesfrance">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/contact.js"></script>
+
+</body>
+</html>

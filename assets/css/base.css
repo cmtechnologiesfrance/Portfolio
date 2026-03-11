@@ -1,0 +1,233 @@
+/* ============================================================
+   base.css — Variables, reset, typographie, utilitaires
+   Martin Chauvelière Portfolio
+   ============================================================ */
+
+/* ── Google Fonts ────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* ── Variables globales ──────────────────────────────────── */
+:root {
+  /* Couleurs */
+  --blanc:        #fafaf8;
+  --blanc-chaud:  #f4f2ee;
+  --encre:        #111110;
+  --rouge:        #e03030;
+  --rouge-hover:  #c42020;
+  --gris-1:       #2a2a28;
+  --gris-2:       #5a5a58;
+  --gris-3:       #9a9a96;
+  --gris-4:       #d4d4d0;
+  --gris-5:       #eaeae6;
+  --gris-6:       #f0f0ec;
+
+  /* Typographie */
+  --font-titre: 'Syne', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --font-mono:  'DM Mono', monospace;
+
+  /* Espacements */
+  --section-pad: 120px;
+  --container:   1200px;
+
+  /* Effets */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  28px;
+  --shadow-sm:  0 2px 12px rgba(17,17,16,0.06);
+  --shadow-md:  0 8px 32px rgba(17,17,16,0.10);
+  --shadow-lg:  0 24px 64px rgba(17,17,16,0.14);
+  --trans:      0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--blanc);
+  color: var(--encre);
+  font-family: var(--font-titre);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img   { max-width: 100%; display: block; }
+a     { color: inherit; text-decoration: none; }
+ul    { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+input, textarea, select { font-family: inherit; }
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── Section espacement ──────────────────────────────────── */
+.section {
+  padding: var(--section-pad) 0;
+}
+.section--alt {
+  background: var(--blanc-chaud);
+}
+.section--dark {
+  background: var(--encre);
+  color: var(--blanc);
+}
+
+/* ── Étiquette de section ────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--rouge);
+  margin-bottom: 18px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--rouge);
+  flex-shrink: 0;
+}
+
+/* En-tête de section */
+.section-header {
+  margin-bottom: 72px;
+  max-width: 600px;
+}
+.section-header--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-header--center .section-label {
+  justify-content: center;
+}
+.section-header--center .section-label::before { display: none; }
+.section-desc {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--gris-2);
+  margin-top: 18px;
+}
+
+/* ── Titres ──────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-titre);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+h1 em, h2 em, h3 em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+h2 { font-size: clamp(1.9rem, 3.2vw, 3rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+
+/* ── Boutons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-titre);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-xs);
+  border: 1.5px solid transparent;
+  transition: var(--trans);
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn--primary {
+  background: var(--encre);
+  color: var(--blanc);
+  border-color: var(--encre);
+}
+.btn--primary:hover {
+  background: var(--rouge);
+  border-color: var(--rouge);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(224,48,48,0.28);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--encre);
+  border-color: var(--gris-4);
+}
+.btn--ghost:hover {
+  border-color: var(--encre);
+  background: var(--blanc-chaud);
+}
+.btn--rouge {
+  background: var(--rouge);
+  color: var(--blanc);
+  border-color: var(--rouge);
+}
+.btn--rouge:hover {
+  background: var(--rouge-hover);
+  border-color: var(--rouge-hover);
+  transform: translateY(-2px);
+}
+.btn--full { width: 100%; }
+.btn--lg   { padding: 17px 36px; font-size: 0.9rem; }
+
+/* ── Badge disponibilité ─────────────────────────────────── */
+.badge-dispo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--blanc-chaud);
+  border: 1.5px solid var(--gris-4);
+  border-radius: 40px;
+  padding: 8px 18px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--gris-1);
+}
+.badge-dispo__dot {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(34,197,94,0.55);
+  animation: pulse-green 2s ease-in-out infinite;
+}
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ── Responsive container ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  :root { --section-pad: 80px; }
+}
+@media (max-width: 480px) {
+  :root { --section-pad: 64px; }
+}

@@ -1,0 +1,220 @@
+/* ============================================================
+   apropos.css — Page À propos
+   ============================================================ */
+
+/* ── Page hero ───────────────────────────────────────────── */
+.page-hero {
+  padding: 140px 0 80px;
+  background: var(--blanc-chaud);
+  border-bottom: 1px solid var(--gris-5);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--gris-4) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gris-4) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.25;
+}
+.page-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+.page-hero__title {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.page-hero__desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--gris-2);
+  max-width: 480px;
+}
+
+/* ── Intro biographie ────────────────────────────────────── */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* Visuel gauche */
+.intro__visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro__avatar {
+  width: 280px;
+  height: 280px;
+  background: var(--encre);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titre);
+  font-size: 7.5rem;
+  font-weight: 800;
+  color: var(--blanc);
+  letter-spacing: -0.04em;
+  position: relative;
+  z-index: 1;
+}
+.intro__avatar-ring {
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rouge);
+  opacity: 0.25;
+  animation: ringPulse 4s ease-in-out infinite;
+}
+@keyframes ringPulse {
+  0%, 100% { transform: scale(1); opacity: 0.25; }
+  50%       { transform: scale(1.04); opacity: 0.1; }
+}
+.intro__badge {
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-5);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-md);
+  margin-top: 28px;
+  text-align: center;
+  min-width: 160px;
+}
+.intro__badge-icon { font-size: 1.5rem; margin-bottom: 6px; }
+.intro__badge strong { display: block; font-size: 0.85rem; font-weight: 700; }
+.intro__badge span { font-size: 0.7rem; color: var(--gris-2); }
+
+/* Texte droite */
+.intro__text h2 { margin-bottom: 22px; }
+.intro__text p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--gris-2);
+  margin-bottom: 18px;
+}
+.intro__text p strong { color: var(--encre); font-weight: 600; }
+.intro__signature {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--gris-3);
+  margin-top: 36px;
+  display: block;
+}
+
+/* ── Compétences ─────────────────────────────────────────── */
+.competences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 100px;
+  margin-top: 52px;
+}
+.comp-item__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.comp-item__pct { color: var(--rouge); font-weight: 700; }
+
+/* ── Valeurs / méthode ───────────────────────────────────── */
+.valeurs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.valeur-card {
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-5);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--trans), box-shadow var(--trans), border-color var(--trans);
+}
+.valeur-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gris-4);
+}
+.valeur-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--rouge);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--trans);
+}
+.valeur-card:hover::before { transform: scaleX(1); }
+.valeur-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: 22px;
+  display: block;
+}
+.valeur-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--encre);
+}
+.valeur-card__text {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--gris-2);
+}
+
+/* ── Outils / Stack ──────────────────────────────────────── */
+.outils__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 52px;
+}
+.outil-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  background: var(--blanc-chaud);
+  border: 1.5px solid var(--gris-5);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: border-color var(--trans), background var(--trans);
+}
+.outil-tag:hover {
+  border-color: var(--gris-4);
+  background: var(--blanc);
+}
+.outil-tag__icon { font-size: 1.2rem; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .intro { grid-template-columns: 1fr; gap: 60px; }
+  .intro__visual { flex-direction: row; align-items: flex-start; gap: 28px; }
+  .valeurs__grid { grid-template-columns: 1fr 1fr; }
+  .outils__grid  { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .competences { grid-template-columns: 1fr; gap: 28px; }
+  .valeurs__grid { grid-template-columns: 1fr; }
+  .outils__grid { grid-template-columns: repeat(2, 1fr); }
+  .intro__visual { flex-direction: column; align-items: center; }
+}

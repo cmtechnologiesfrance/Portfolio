@@ -1,0 +1,218 @@
+/* ============================================================
+   hero.css — Section Hero (index.html)
+   ============================================================ */
+
+.hero {
+  min-height: 100vh;
+  padding-top: 68px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grille de fond */
+.hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--gris-5) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gris-5) 1px, transparent 1px);
+  background-size: 52px 52px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.hero__grid-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 40%, transparent 30%, var(--blanc) 80%);
+}
+
+/* Corps du hero */
+.hero__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Colonne gauche */
+.hero__left {}
+.hero__badge { margin-bottom: 32px; }
+
+.hero__title {
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 26px;
+  color: var(--encre);
+}
+.hero__title em {
+  color: var(--rouge);
+  display: block;
+}
+
+.hero__desc {
+  font-size: 1.02rem;
+  line-height: 1.82;
+  color: var(--gris-2);
+  max-width: 430px;
+  margin-bottom: 44px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Colonne droite — carte code */
+.hero__right {
+  position: relative;
+}
+
+.hero__code-card {
+  background: var(--encre);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.04);
+}
+.hero__code-card-bar {
+  background: var(--gris-1);
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.hero__code-dots {
+  display: flex;
+  gap: 6px;
+}
+.hero__code-dots span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+}
+.hero__code-dots span:nth-child(1) { background: #ff5f57; }
+.hero__code-dots span:nth-child(2) { background: #febc2e; }
+.hero__code-dots span:nth-child(3) { background: #28c840; }
+.hero__code-filename {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--gris-3);
+  margin-left: 6px;
+}
+.hero__code-body {
+  padding: 30px 36px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 2.15;
+}
+.code-line        { display: block; }
+.code-line--indent { padding-left: 22px; }
+.c-tag    { color: #f472b6; }
+.c-attr   { color: #7dd3fc; }
+.c-equals { color: var(--gris-3); }
+.c-val    { color: #86efac; }
+.c-comment { color: var(--gris-2); font-style: italic; }
+
+/* Cartes flottantes */
+.hero__chip {
+  position: absolute;
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-5);
+  border-radius: var(--radius-md);
+  padding: 11px 17px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  z-index: 3;
+}
+.hero__chip-icon { font-size: 1rem; }
+.hero__chip--1 { top: -18px; right: -20px; }
+.hero__chip--2 { bottom: 24px; left: -24px; }
+
+/* Scroll indicator */
+.hero__footer {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 44px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Bandeau chiffres ────────────────────────────────────── */
+.chiffres {
+  background: var(--encre);
+  padding: 64px 0;
+}
+.chiffres__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+.chiffres__grid::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+}
+.chiffre {
+  padding: 40px 32px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+.chiffre:last-child { border-right: none; }
+
+.chiffre__num {
+  font-family: var(--font-titre);
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--blanc);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  display: block;
+}
+.chiffre__suffix {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--rouge);
+  vertical-align: super;
+  line-height: 1;
+}
+.chiffre__label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris-3);
+  margin-top: 10px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__body { grid-template-columns: 1fr; gap: 60px; }
+  .hero__right { max-width: 520px; }
+  .hero__chip { display: none; }
+}
+@media (max-width: 768px) {
+  .hero__body { padding: 56px 0; }
+  .chiffres__grid { grid-template-columns: repeat(2, 1fr); }
+  .chiffre { border-bottom: 1px solid rgba(255,255,255,0.06); }
+}
+@media (max-width: 480px) {
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+}

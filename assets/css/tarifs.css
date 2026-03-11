@@ -1,0 +1,213 @@
+/* ============================================================
+   tarifs.css — Page Tarifs
+   ============================================================ */
+
+/* ── Grille de cartes ────────────────────────────────────── */
+.tarifs__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── Carte tarif ─────────────────────────────────────────── */
+.tarif-card {
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-5);
+  border-radius: var(--radius-lg);
+  padding: 44px 36px;
+  position: relative;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.tarif-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Carte vedette */
+.tarif-card--featured {
+  background: var(--encre);
+  border-color: var(--encre);
+  color: var(--blanc);
+  transform: scale(1.02);
+}
+.tarif-card--featured:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+.tarif-card__badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--rouge);
+  color: var(--blanc);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+/* En-tête de carte */
+.tarif-card__header {
+  margin-bottom: 30px;
+}
+.tarif-card__icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 16px;
+  color: var(--rouge);
+}
+.tarif-card--featured .tarif-card__icon { color: var(--gris-4); }
+.tarif-card__name {
+  font-family: var(--font-titre);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.tarif-card__tagline {
+  font-size: 0.78rem;
+  color: var(--gris-2);
+  line-height: 1.5;
+}
+.tarif-card--featured .tarif-card__tagline { color: var(--gris-3); }
+
+/* Prix */
+.tarif-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 36px;
+  line-height: 1;
+}
+.tarif-card__amount {
+  font-family: var(--font-titre);
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.tarif-card__currency {
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0.45;
+  align-self: flex-start;
+  margin-top: 6px;
+}
+.tarif-card__period {
+  font-size: 0.75rem;
+  color: var(--gris-3);
+  align-self: flex-end;
+  padding-bottom: 4px;
+}
+
+/* Features list */
+.tarif-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+  list-style: none;
+}
+.tarif-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.tarif-card__features li.off {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+.feat-check { color: var(--rouge); font-weight: 800; flex-shrink: 0; }
+.tarif-card--featured .feat-check { color: #86efac; }
+
+/* Bouton */
+.tarif-card__btn { width: 100%; justify-content: center; }
+.tarif-card--featured .btn--rouge {
+  background: var(--rouge);
+  border-color: var(--rouge);
+}
+.tarif-card--featured .btn--rouge:hover {
+  background: var(--blanc);
+  color: var(--encre);
+  border-color: var(--blanc);
+}
+
+/* ── Note bas de page ────────────────────────────────────── */
+.tarifs__note {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--gris-3);
+  margin-top: 40px;
+  line-height: 1.8;
+}
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--blanc);
+  border: 1.5px solid var(--gris-5);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.faq-item__question {
+  width: 100%;
+  padding: 22px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-titre);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--encre);
+  transition: color var(--trans);
+  gap: 16px;
+}
+.faq-item__question:hover { color: var(--rouge); }
+.faq-item__icon {
+  font-size: 1.2rem;
+  transition: transform var(--trans);
+  flex-shrink: 0;
+  color: var(--gris-3);
+}
+.faq-item.open .faq-item__icon { transform: rotate(45deg); color: var(--rouge); }
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 28px;
+}
+.faq-item.open .faq-item__answer {
+  max-height: 300px;
+  padding: 0 28px 24px;
+}
+.faq-item__answer p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--gris-2);
+  border-top: 1px solid var(--gris-5);
+  padding-top: 18px;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .tarifs__grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+  .tarif-card--featured { transform: none; }
+  .tarif-card--featured:hover { transform: translateY(-5px); }
+}
+@media (max-width: 640px) {
+  .tarif-card { padding: 32px 24px; }
+}
